@@ -44,7 +44,8 @@ form.addEventListener("submit", e => {
         })
         .catch(error => {
             console.log(error);
-            output.textContent = "Pokemon not found :(";
+            outputPokemonName.textContent = "Pokemon not found :(";
+            output.appendChild(outputPokemonName);
         });
 });
 
