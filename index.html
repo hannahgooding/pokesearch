@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokesearch</title>
+</head>
+<body>
+    <h1>Pokémon, Gotta Search 'Em All</h1>
+    <form>
+        <label for="pokemon-name">Pokemon Name</label>
+        <input id="pokemon-name" name="pokemon-name" type="search">
+        <input type="submit" value="Search">
+    </form>
+    <section class="output">
+
+    </section>
+</body>
+<script>
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", e => {
+    e.preventDefault();
+    const pokemonName = document.querySelector("#pokemon-name").value;
+    fetch("https://pokeapi.co/api/v2/pokemon/" + `${pokemonName}`)
+        .then(res => {
+            if (!res.ok) throw new Error(res.status);
+            return res.json();
+        })
+        .then(json => console.log(json))
+        .catch(error => console.error("pokemon not found"));
+});
+
+
+</script>
+</html>
