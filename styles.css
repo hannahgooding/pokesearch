@@ -66,14 +66,28 @@ input {
     height: 40%;
 }
 
-.output__pokemon-name {
-    
-}
-
-.output__pokemon-image {
-
-}
-
 .output__pokemon-type {
-    
+    padding: 0.3rem;
+    margin: 0.2rem;
+    border-radius: 2px;
+    text-transform: uppercase;
 }
+
+.output__pokemon-type--normal { background-color: hsl(40, 13%, 62%); }
+.output__pokemon-type--fighting { background-color: hsl(13, 48%, 43%); }
+.output__pokemon-type--flying { background-color: hsl(228, 85%, 79%); }
+.output__pokemon-type--poison { background-color: hsl(311, 38%, 53%); }
+.output__pokemon-type--ground { background-color: hsl(44, 60%, 59%); }
+.output__pokemon-type--rock { background-color: hsl(45, 42%, 54%); }
+.output__pokemon-type--bug { background-color: hsl(67, 53%, 48%); }
+.output__pokemon-type--ghost { background-color: hsl(240, 35%, 54%); }
+.output__pokemon-type--steel { background-color: hsl(240, 17%, 72%); }
+.output__pokemon-type--fire { background-color: hsl(9, 84%, 56%); }
+.output__pokemon-type--water { background-color: hsl(209, 92%, 59%); }
+.output__pokemon-type--grass { background-color: hsl(100, 55%, 56%); }
+.output__pokemon-type--electric { background-color: hsl(42, 93%, 62%); }
+.output__pokemon-type--psychic { background-color: hsl(335, 78%, 68%); }
+.output__pokemon-type--ice { background-color: hsl(190, 74%, 62%); }
+.output__pokemon-type--dragon { background-color: hsl(250, 73%, 64%); }
+.output__pokemon-type--dark { background-color: hsl(23, 21%, 37%); }
+.output__pokemon-type--fairy { background-color: hsl(297, 71%, 76%); }
