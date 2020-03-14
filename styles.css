@@ -45,6 +45,7 @@ input {
 .form__submit-btn {
     background-color: hsl(100, 100%, 100%);
     border-color: hsl(0, 0%, 0%);
+    border-width: 0.1em;
     padding: 0.5rem;
     font-family: 'Roboto Mono', monospace;
     font-size: 0.9rem;
