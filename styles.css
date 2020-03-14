@@ -1,6 +1,7 @@
 html {
     box-sizing: border-box;
     font-size: 1rem;
+    font-family: 'Roboto Mono', monospace;
 }
 
 body {
@@ -38,7 +39,7 @@ input {
 }
 
 .output__pokemon-image {
-    
+
 }
 
 .output__pokemon-type {
