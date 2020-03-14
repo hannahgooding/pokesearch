@@ -2,6 +2,7 @@ const form = document.querySelector("form");
 const output = document.querySelector(".output");
 const outputPokemonName = document.createElement("p");
 const outputPokemonImage = document.createElement("img");
+const outputPokemonType = document.createElement("p");
 
 form.addEventListener("submit", e => {
     e.preventDefault();
@@ -19,8 +20,15 @@ form.addEventListener("submit", e => {
             outputPokemonName.textContent = res.name[0].toUpperCase() + res.name.slice(1);
             // capitalise pokemon name
             outputPokemonImage.src = res.sprites.front_default;
+            const pokemonTypes = res.types;
+            let pokemonTypesArray = [];
+            Object.keys(pokemonTypes).forEach(key => {
+                pokemonTypesArray.push(pokemonTypes[key].type.name);
+            });
+            outputPokemonType.textContent = pokemonTypesArray.join(" ").toUpperCase();
             output.appendChild(outputPokemonName);
             output.appendChild(outputPokemonImage);
+            output.appendChild(outputPokemonType);
         })
         .catch(error => {
             console.log(error);
