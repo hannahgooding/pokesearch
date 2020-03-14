@@ -6,32 +6,46 @@ html {
 
 body {
     background-color: hsl(0, 100%, 50%);
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    height: 90vh;
     margin: auto;
-    max-width: 70%;
 }
 
 form {
     background-color: hsl(100, 100%, 100%);
     border-radius: 5px;
-    padding: 3rem;
-    margin-bottom: 3rem;
-    min-height: 20vw;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
 input {
-    border-color: black;
+    border-color: hsl(0, 0%, 0%);
     border-width: 0.1em;
+    margin: 0.5rem;
 }
 
 .output {
     background-color: hsl(100, 100%, 100%);
     border-radius: 5px;
-    border-color: black;
-    padding: 3rem;
-    min-height: 20vw;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40%;
 }
 
 .output__pokemon-name {
