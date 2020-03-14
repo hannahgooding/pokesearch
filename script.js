@@ -20,15 +20,21 @@ form.addEventListener("submit", e => {
             outputPokemonName.textContent = res.name[0].toUpperCase() + res.name.slice(1);
             // capitalise pokemon name
             outputPokemonImage.src = res.sprites.front_default;
+
             const pokemonTypes = res.types;
             let pokemonTypesArray = [];
             Object.keys(pokemonTypes).forEach(key => {
                 pokemonTypesArray.push(pokemonTypes[key].type.name);
             });
             outputPokemonType.textContent = pokemonTypesArray.join(" ").toUpperCase();
+
             output.appendChild(outputPokemonName);
             output.appendChild(outputPokemonImage);
             output.appendChild(outputPokemonType);
+
+            outputPokemonName.setAttribute("class", "output__pokemon-name");
+            outputPokemonImage.setAttribute("class", "output__pokemon-image");
+            outputPokemonType.setAttribute("class", "output__pokemon-type");
         })
         .catch(error => {
             console.log(error);
